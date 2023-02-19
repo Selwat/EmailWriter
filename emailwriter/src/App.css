@@ -1,0 +1,413 @@
+/*  fgdgdf */
+dfgfdgdffdgdfgdfg
+:root {
+    --color-bg: rgb(17, 50, 235);
+    --color-main: #000;
+}
+::-webkit-scrollbar {
+    width: 0px;
+  }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Combo', cursive;
+    
+}
+
+body {
+    text-align: center;
+    background: var(--color-bg);
+    color: var(--color-main);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    transition: background-color 0.3s;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    min-height: min-content;
+    padding-bottom: 40px;
+}
+.material-symbols-outlined{
+    display: flex;
+    position: absolute;
+    background:#fff;
+    transition: 0.2s;
+    z-index: -1;
+   border-radius: 7px;
+   margin-left: -10px;
+   margin-top: -10px;
+}
+
+button{
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.2s;
+}
+button:hover .material-symbols-outlined{
+    float: left;
+    z-index: 1;
+}
+label{
+    font-size: 12px;
+}
+header {
+    width: 100%;
+    padding: 10px 20px;
+    text-align: right;
+}
+
+header button {
+    background-color: rgb(17, 235, 210);
+    border: solid 4px #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    height: 40px;
+    width: 80px;
+    outline-width: 5px;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.icon {
+    background-color: grey;
+    border-radius: 100%;
+    content: "";
+    display: block;
+    height: 22px;
+    width: 22px;
+    margin: 1px 10px;
+    position: relative;
+    transition: background-color 0.3s, transform 0.3s;
+   
+}
+
+/* LIGHT MODE */
+body.light {
+    --color-bg: rgb(17, 235, 210);
+    --color-main: #000;
+}
+
+
+body.light .icon {
+    background: yellow;
+    transform: translateX(0);
+}
+
+body.light .icon::after {
+    content: none;
+}
+
+
+/* DARK MODE */
+
+body.dark {
+    --color-bg: #000;
+    --color-main: #fff;
+}
+
+body.dark .icon {
+    background: yellow;
+    transform: translateX(33px);
+}
+
+body.dark .icon::after {
+    background-color: #000;
+    border-radius: 100%;
+    content: "";
+    display: block;
+    height: 16px;
+    width: 16px;
+    left: -2px;
+    position: absolute;
+    top: 2px;
+    transition: background-color 0.3s;
+}
+body.dark header button {
+    background-color: #000;
+}
+body.dark .calyform{
+    opacity: 0.8;
+}
+body.dark .stopka{
+    background: linear-gradient(rgba(255, 255, 253, 0.01), rgba(149, 228, 21, 0.362));
+}
+
+
+
+
+.calyform{
+    background-color: rgba(255, 255, 255, 0.926);
+    width: 70vw;
+    height: min-content;
+    margin-left:15vw;
+    margin-top: 2vh;
+    box-shadow: 2px 2px 1em black;
+    padding: 0px 10px;
+    text-align: left;
+    padding-bottom: 40px;
+    font-size: 18px;
+}
+.adresatDiv{
+    background-color: rgb(255, 255, 255);
+    min-width: min-content;
+    border: 1px solid gray;
+    padding: 10px;
+    transition: 0.5s;
+    height: min-content;
+
+}
+.adresat:hover {
+    padding: 8px 8px;
+    margin: 2px 2px;
+}
+.adresat{
+    width: 100%;
+    padding:8px 25px;
+    border-radius: 8px;
+    border: 1px dashed;
+    outline: none;
+    transition: 0.5s;
+    font-size: 17px;
+}
+
+.subjectDiv{
+    background-color: rgb(255, 255, 255);
+    min-width: min-content;
+    border: 1px solid gray;
+    padding: 10px;
+    transition: 0.5s;
+    height: min-content;
+}
+.subject{
+    width: 100%;
+    padding:8px 25px;
+    border-radius: 8px;
+    border: 1px dashed;
+    outline: none;
+    transition: 0.5s;
+    font-size: 15px;
+}
+.subject:hover {
+    padding: 8px 8px;
+    margin: 2px 2px;
+}
+.bodyPrzywitanie {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    width: min-content + 5px;
+    border: 1px solid gray;
+    padding: 10px;
+    gap: 5px;
+    flex-wrap: wrap;
+    transition: 0.5s;
+}
+.bodyPrzywitanie p{
+    font-size:18px;
+}
+#Przywitanie1{background-color: rgb(40, 250, 246);}
+#Przywitanie2{background-color: rgb(244, 129, 242);}
+#Przywitanie3{background-color: rgba(250, 40, 134, 0.79);}
+#Przywitanie4{background-color: rgb(10, 223, 220);}
+#Przywitanie5{background-color: rgb(243, 68, 240);}
+#Przywitanie6{background-color: rgb(197, 222, 55);}
+#Przywitanie7{background-color: rgb(40, 250, 145);}
+#Przywitanie8{background-color: rgb(40, 127, 250);}
+
+.Przywitanie{
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+    
+}
+.Przywitanie:hover{
+    padding: 8px 8px;
+    margin: 2px 2px;
+    transition: 0.5s;
+}
+.bodyPoczatek{
+    margin-top: 5vh;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    width: min-content + 5px;
+    border: 1px solid gray;
+    padding: 10px;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+#Poczatek1{background-color: rgb(40, 250, 246);}
+#Poczatek2{background-color: rgb(204, 244, 129);}
+#Poczatek3{background-color: rgba(40, 250, 64, 0.79);}
+#Poczatek4{background-color: rgb(10, 223, 220);}
+#Poczatek5{background-color: rgb(243, 68, 240);}
+#Poczatek6{background-color: rgb(197, 222, 55);}
+#Poczatek7{background-color: rgb(243, 250, 40);}
+#Poczatek8{background-color: rgb(246, 40, 250);}
+
+.Poczatek {
+    padding: 10px;
+    border-radius: 10px;
+}
+.Poczatek:hover{
+    padding: 8px 8px;
+    margin: 2px 2px;
+}
+
+
+.userMessage{
+    max-height: 50vh;
+	min-height: 90px;
+	width: 100%;
+    margin-top: 5vh;
+    padding: 10px;
+	resize: vertical;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+	Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	overflow-y: auto;
+    transition: 0.5s;
+}
+.bodyZakonczenie{
+    margin-top: 5vh;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    width: min-content + 5px;
+    border: 1px solid gray;
+    padding: 10px;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.Zakonczenie{
+    padding: 10px;
+    border-radius: 10px;
+}
+.Zakonczenie:hover{
+    padding: 8px 8px;
+    margin: 2px 2px;
+}
+
+#Zakonczenie1{background-color: rgb(40, 250, 246);}
+#Zakonczenie2{background-color: rgb(204, 244, 129);}
+#Zakonczenie3{background-color: rgba(40, 250, 64, 0.79);}
+#Zakonczenie4{background-color: rgb(10, 223, 220);}
+#Zakonczenie5{background-color: rgb(243, 68, 240);}
+#Zakonczenie6{background-color: rgb(197, 222, 55);}
+#Zakonczenie7{background-color: rgb(243, 250, 40);}
+#Zakonczenie8{background-color: rgb(246, 40, 250);}
+#Zakonczenie9{background-color: rgb(40, 250, 246);}
+#Zakonczenie10{background-color: rgb(204, 244, 129);}
+#Zakonczenie11{background-color: rgba(40, 250, 64, 0.79);}
+#Zakonczenie12{background-color: rgb(10, 223, 220);}
+#Zakonczenie13{background-color: rgb(243, 68, 240);}
+#Zakonczenie14{background-color: rgb(197, 222, 55);}
+#Zakonczenie15{background-color: rgb(243, 250, 40);}
+
+
+.bodyPozegnanie{
+
+    margin-top: 5vh;
+    display: inline-flex;
+    background-color: rgb(255, 255, 255);
+    width: min-content + 5px;
+    border: 1px solid gray;
+    padding: 10px;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-items: center;
+}
+.Pozegnanie{
+    padding: 10px;
+    border-radius: 10px;
+}
+.Pozegnanie:hover{
+    padding: 8px 8px;
+    margin: 2px 2px;
+}
+
+#Pozegnanie1{background-color: rgb(40, 250, 246);}
+#Pozegnanie2{background-color: rgb(204, 244, 129);}
+#Pozegnanie3{background-color: rgba(40, 250, 64, 0.79);}
+#Pozegnanie4{background-color: rgb(10, 223, 220);}
+#Pozegnanie5{background-color: rgb(243, 68, 240);}
+#Pozegnanie6{background-color: rgb(197, 222, 55);}
+#Pozegnanie7{background-color: rgb(243, 250, 40);}
+#Pozegnanie8{background-color: rgb(246, 40, 250);}
+#Pozegnanie9{background-color: rgb(40, 250, 246);}
+
+.userName{
+    max-height: 20vh;
+	min-height: 50px;
+	width: 100%;
+    margin-top: 5vh;
+    padding: 10px;
+	resize: vertical;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+	Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	overflow-y: auto;
+}
+
+.stopka{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    transition: background 0.5s ease;
+    background: linear-gradient(rgba(255, 255, 253, 0.01), rgba(147, 228, 21, 0.7));
+    
+}
+
+.stopka button{
+font-family: Roboto, sans-serif;
+font-weight: 0;
+font-size: 14px;
+color: #fff;
+background-color: #58cc00;
+padding: 10px 30px;
+border: 2px solid #58cc00;
+box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+border-radius: 50px;
+transition : 1000ms;
+transform: translateY(0);
+display: flex;
+flex-direction: row;
+align-items: center;
+cursor: pointer;
+}
+
+.stopka button:hover{
+transition : 1000ms;
+padding: 10px 50px;
+transform : translateY(-0px);
+background-color: #fff;
+color: #58cc00;
+border: solid 2px #58cc00;
+
+}
+
+
+.Reset {
+    margin-top: -25px;
+    margin-left: 90%;
+	box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+	background-color:#f24537;
+	border-radius:6px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+
+
+
