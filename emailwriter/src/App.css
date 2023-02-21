@@ -194,6 +194,7 @@ body.dark .stopka{
     margin: 2px 2px;
 }
 .GreetingBody {
+    margin-top: 5vh;
     display: flex;
     background-color: rgb(255, 255, 255);
     width: min-content + 5px;
@@ -201,7 +202,7 @@ body.dark .stopka{
     padding: 10px;
     gap: 5px;
     flex-wrap: wrap;
-    transition: 0.5s;
+    justify-content: flex-start; 
 }
 
 #Greeting1{background-color: rgb(40, 250, 246);}
@@ -224,7 +225,7 @@ body.dark .stopka{
     margin: 2px 2px;
     transition: 0.5s;
 }
-.beginningBody{
+.beginningBody {
     margin-top: 5vh;
     display: flex;
     background-color: rgb(255, 255, 255);
@@ -233,7 +234,8 @@ body.dark .stopka{
     padding: 10px;
     gap: 5px;
     flex-wrap: wrap;
-}
+    justify-content: flex-start; 
+  }
 #beginning1{background-color: rgb(40, 250, 246);}
 #beginning2{background-color: rgb(204, 244, 129);}
 #beginning3{background-color: rgba(40, 250, 64, 0.79);}
@@ -274,6 +276,7 @@ body.dark .stopka{
     padding: 10px;
     gap: 5px;
     flex-wrap: wrap;
+    justify-content: flex-start; 
 }
 
 .Ending{
@@ -303,16 +306,15 @@ body.dark .stopka{
 
 
 .bodyFarewell{
-
     margin-top: 5vh;
-    display: inline-flex;
+    display: flex;
     background-color: rgb(255, 255, 255);
     width: min-content + 5px;
     border: 1px solid gray;
     padding: 10px;
     gap: 5px;
     flex-wrap: wrap;
-    justify-items: center;
+    justify-content: flex-start; 
 }
 .Farewell{
     padding: 10px;
@@ -353,11 +355,13 @@ body.dark .stopka{
     justify-content: center;
     gap: 20px;
     padding: 10px;
-    transition: background 0.5s ease;
-    background: linear-gradient(rgba(255, 255, 253, 0.01), rgba(147, 228, 21, 0.7));
-    
+    background-color:#ffffff8d;
+    height: max-content;
+    transition: 0.5s;
 }
-
+.stopka:hover{
+    background-color: #ffffffe8;
+}
 .stopka button{
 font-family: Roboto, sans-serif;
 font-weight: 0;
@@ -383,28 +387,33 @@ transform : translateY(-0px);
 background-color: #fff;
 color: #58cc00;
 border: solid 2px #58cc00;
-
 }
+
 
 
 .Reset {
-    margin-top: -25px;
-    margin-left: 90%;
-	box-shadow:inset 0px 1px 0px 0px #f5978e;
-	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
-	background-color:#f24537;
-	border-radius:6px;
-	border:1px solid #d02718;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #810e05;
-}
-
+    margin-top: -5px;
+    margin-left: auto; /* zmiana */
+    align-items: center;
+    box-shadow: inset 0px 1px 0px 0px #f5978e;
+    background: linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+    background-color: #f24537;
+    border-radius: 6px;
+    border: 1px solid #d02718;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #810e05;
+  }
+  
+  .Reset:hover {
+    background: linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+    background-color: #c62d1f;
+  }
 
 
