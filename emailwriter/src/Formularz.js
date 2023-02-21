@@ -1,11 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import './App.css';
-import Przywitanie from './Przywitanie';
-import Zakonczenie from './Zakonczenie';
-import Pozegnanie from './Pozegnanie';
+import Greeting from './Przywitanie';
+import Beginning from "./Poczatek";
+import Ending from './Zakonczenie';
+import Farewell from './Pozegnanie';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import Poczatek from "./Poczatek";
+
 
 
 const Formularz = () => {
@@ -15,14 +16,18 @@ const Formularz = () => {
   const handleCopy = () => {
     const adresat = document.querySelector('.adresat').value;
     const subject = document.querySelector('.subject').value;
+    const bodyGreeting = document.querySelector('.GreetingBody p').textContent;
+    const beginningBody = document.querySelector('.beginningBody p').textContent;
     const userMessage = document.querySelector('.userMessage').value;
+    const bodyEnding = document.querySelector('.bodyEnding p').textContent;
+    const bodyFarewell = document.querySelector('.bodyFarewell p').textContent;
     const userName = document.querySelector('.userName').value;
-    const bodyPozegnanie = document.querySelector('.bodyPozegnanie p').textContent;
-    const bodyPrzywitanie = document.querySelector('.bodyPrzywitanie p').textContent;
-    const bodyPoczatek = document.querySelector('.bodyPoczatek p').textContent;
-    const bodyZakonczenie = document.querySelector('.bodyZakonczenie p').textContent;
+  
+  
+   
+    
     setContent(
-      `To: ${adresat}\nSubject: ${subject}\n\n${bodyPrzywitanie}\n${bodyPoczatek}\n${userMessage}\n\n${bodyZakonczenie}\n\n${bodyPozegnanie}\n${userName}`
+      `To: ${adresat}\nSubject: ${subject}\n\n${bodyGreeting}\n${beginningBody}\n${userMessage}\n\n${bodyEnding}\n\n${bodyFarewell}\n${userName}`
     );
   };
   
@@ -31,7 +36,7 @@ const Formularz = () => {
     setReset(null);
   };
   const onClickReset = () => {
-    setReset("resetowac");
+    setReset("reset");
     const adresat = document.querySelector('.adresat').value = "";
     const subject = document.querySelector('.subject').value = "";
     const userMessage = document.querySelector('.userMessage').value = "";
@@ -56,11 +61,11 @@ const Formularz = () => {
         </div>
         <label>Body:</label>
         <div className="bodyDiv">
-          <Przywitanie reset={reset} back={returnReset}/>
-          <Poczatek reset={reset} back={returnReset}/>
+          <Greeting reset={reset} back={returnReset}/>
+          <Beginning reset={reset} back={returnReset}/>
           <textarea className="userMessage" placeholder="Your message body goes here" />
-          <Zakonczenie reset={reset} back={returnReset}/>
-          <Pozegnanie reset={reset} back={returnReset}/>
+          <Ending reset={reset} back={returnReset}/>
+          <Farewell reset={reset} back={returnReset}/>
           <textarea className="userName" placeholder="Your signature/name" />
         </div>
       </section>

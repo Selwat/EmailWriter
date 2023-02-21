@@ -193,7 +193,7 @@ body.dark .stopka{
     padding: 8px 8px;
     margin: 2px 2px;
 }
-.bodyPrzywitanie {
+.GreetingBody {
     display: flex;
     background-color: rgb(255, 255, 255);
     width: min-content + 5px;
@@ -203,30 +203,28 @@ body.dark .stopka{
     flex-wrap: wrap;
     transition: 0.5s;
 }
-.bodyPrzywitanie p{
-    font-size:18px;
-}
-#Przywitanie1{background-color: rgb(40, 250, 246);}
-#Przywitanie2{background-color: rgb(244, 129, 242);}
-#Przywitanie3{background-color: rgba(250, 40, 134, 0.79);}
-#Przywitanie4{background-color: rgb(10, 223, 220);}
-#Przywitanie5{background-color: rgb(243, 68, 240);}
-#Przywitanie6{background-color: rgb(197, 222, 55);}
-#Przywitanie7{background-color: rgb(40, 250, 145);}
-#Przywitanie8{background-color: rgb(40, 127, 250);}
 
-.Przywitanie{
+#Greeting1{background-color: rgb(40, 250, 246);}
+#Greeting2{background-color: rgb(244, 129, 242);}
+#Greeting3{background-color: rgba(250, 40, 134, 0.79);}
+#Greeting4{background-color: rgb(10, 223, 220);}
+#Greeting5{background-color: rgb(243, 68, 240);}
+#Greeting6{background-color: rgb(197, 222, 55);}
+#Greeting7{background-color: rgb(40, 250, 145);}
+#Greeting8{background-color: rgb(40, 127, 250);}
+
+.Greeting{
     padding: 10px;
     border-radius: 10px;
     transition: 0.5s;
     
 }
-.Przywitanie:hover{
+.Greeting:hover{
     padding: 8px 8px;
     margin: 2px 2px;
     transition: 0.5s;
 }
-.bodyPoczatek{
+.beginningBody{
     margin-top: 5vh;
     display: flex;
     background-color: rgb(255, 255, 255);
@@ -236,20 +234,20 @@ body.dark .stopka{
     gap: 5px;
     flex-wrap: wrap;
 }
-#Poczatek1{background-color: rgb(40, 250, 246);}
-#Poczatek2{background-color: rgb(204, 244, 129);}
-#Poczatek3{background-color: rgba(40, 250, 64, 0.79);}
-#Poczatek4{background-color: rgb(10, 223, 220);}
-#Poczatek5{background-color: rgb(243, 68, 240);}
-#Poczatek6{background-color: rgb(197, 222, 55);}
-#Poczatek7{background-color: rgb(243, 250, 40);}
-#Poczatek8{background-color: rgb(246, 40, 250);}
+#beginning1{background-color: rgb(40, 250, 246);}
+#beginning2{background-color: rgb(204, 244, 129);}
+#beginning3{background-color: rgba(40, 250, 64, 0.79);}
+#beginning4{background-color: rgb(10, 223, 220);}
+#beginning5{background-color: rgb(243, 68, 240);}
+#beginning6{background-color: rgb(197, 222, 55);}
+#beginning7{background-color: rgb(243, 250, 40);}
+#beginning8{background-color: rgb(246, 40, 250);}
 
-.Poczatek {
+.beginning {
     padding: 10px;
     border-radius: 10px;
 }
-.Poczatek:hover{
+.beginning:hover{
     padding: 8px 8px;
     margin: 2px 2px;
 }
@@ -267,7 +265,7 @@ body.dark .stopka{
 	overflow-y: auto;
     transition: 0.5s;
 }
-.bodyZakonczenie{
+.bodyEnding{
     margin-top: 5vh;
     display: flex;
     background-color: rgb(255, 255, 255);
@@ -278,33 +276,33 @@ body.dark .stopka{
     flex-wrap: wrap;
 }
 
-.Zakonczenie{
+.Ending{
     padding: 10px;
     border-radius: 10px;
 }
-.Zakonczenie:hover{
+.Ending:hover{
     padding: 8px 8px;
     margin: 2px 2px;
 }
 
-#Zakonczenie1{background-color: rgb(40, 250, 246);}
-#Zakonczenie2{background-color: rgb(204, 244, 129);}
-#Zakonczenie3{background-color: rgba(40, 250, 64, 0.79);}
-#Zakonczenie4{background-color: rgb(10, 223, 220);}
-#Zakonczenie5{background-color: rgb(243, 68, 240);}
-#Zakonczenie6{background-color: rgb(197, 222, 55);}
-#Zakonczenie7{background-color: rgb(243, 250, 40);}
-#Zakonczenie8{background-color: rgb(246, 40, 250);}
-#Zakonczenie9{background-color: rgb(40, 250, 246);}
-#Zakonczenie10{background-color: rgb(204, 244, 129);}
-#Zakonczenie11{background-color: rgba(40, 250, 64, 0.79);}
-#Zakonczenie12{background-color: rgb(10, 223, 220);}
-#Zakonczenie13{background-color: rgb(243, 68, 240);}
-#Zakonczenie14{background-color: rgb(197, 222, 55);}
-#Zakonczenie15{background-color: rgb(243, 250, 40);}
+#Ending1{background-color: rgb(40, 250, 246);}
+#Ending2{background-color: rgb(204, 244, 129);}
+#Ending3{background-color: rgba(40, 250, 64, 0.79);}
+#Ending4{background-color: rgb(10, 223, 220);}
+#Ending5{background-color: rgb(243, 68, 240);}
+#Ending6{background-color: rgb(197, 222, 55);}
+#Ending7{background-color: rgb(243, 250, 40);}
+#Ending8{background-color: rgb(246, 40, 250);}
+#Ending9{background-color: rgb(40, 250, 246);}
+#Ending10{background-color: rgb(204, 244, 129);}
+#Ending11{background-color: rgba(40, 250, 64, 0.79);}
+#Ending12{background-color: rgb(10, 223, 220);}
+#Ending13{background-color: rgb(243, 68, 240);}
+#Ending14{background-color: rgb(197, 222, 55);}
+#Ending15{background-color: rgb(243, 250, 40);}
 
 
-.bodyPozegnanie{
+.bodyFarewell{
 
     margin-top: 5vh;
     display: inline-flex;
@@ -316,24 +314,24 @@ body.dark .stopka{
     flex-wrap: wrap;
     justify-items: center;
 }
-.Pozegnanie{
+.Farewell{
     padding: 10px;
     border-radius: 10px;
 }
-.Pozegnanie:hover{
+.Farewell:hover{
     padding: 8px 8px;
     margin: 2px 2px;
 }
 
-#Pozegnanie1{background-color: rgb(40, 250, 246);}
-#Pozegnanie2{background-color: rgb(204, 244, 129);}
-#Pozegnanie3{background-color: rgba(40, 250, 64, 0.79);}
-#Pozegnanie4{background-color: rgb(10, 223, 220);}
-#Pozegnanie5{background-color: rgb(243, 68, 240);}
-#Pozegnanie6{background-color: rgb(197, 222, 55);}
-#Pozegnanie7{background-color: rgb(243, 250, 40);}
-#Pozegnanie8{background-color: rgb(246, 40, 250);}
-#Pozegnanie9{background-color: rgb(40, 250, 246);}
+#Farewell1{background-color: rgb(40, 250, 246);}
+#Farewell2{background-color: rgb(204, 244, 129);}
+#Farewell3{background-color: rgba(40, 250, 64, 0.79);}
+#Farewell4{background-color: rgb(10, 223, 220);}
+#Farewell5{background-color: rgb(243, 68, 240);}
+#Farewell6{background-color: rgb(197, 222, 55);}
+#Farewell7{background-color: rgb(243, 250, 40);}
+#Farewell8{background-color: rgb(246, 40, 250);}
+#Farewell9{background-color: rgb(40, 250, 246);}
 
 .userName{
     max-height: 20vh;

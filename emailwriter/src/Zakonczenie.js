@@ -1,19 +1,19 @@
 import React, { useState, useEffect} from "react";
 
-const Zakonczenie = ({ reset, back }) => {
+const Ending = ({ reset, back }) => {
   const [content, setContent] = useState({
-    bodyZakonczenie: ''
+    bodyEnding: ''
   });
 
   const [display, setDisplay] = useState({
-    bodyZakonczenie: 'flex',
-    Zakonczenie: 'flex',
+    bodyEnding: 'flex',
+    Ending: 'flex',
     Reset: 'none',
   });
 
 
   useEffect(() => {
-    if (reset === "resetowac") {
+    if (reset === "reset") {
       ResetClick();
       
     }
@@ -23,15 +23,15 @@ const Zakonczenie = ({ reset, back }) => {
   const bodyContent = (value) => {
     setContent({
       ...content,
-      bodyZakonczenie: value,
+      bodyEnding: value,
     });
   };
 
   const handleClick = (value) => {
     setDisplay({
       ...display,
-      bodyZakonczenie: 'flex',
-      Zakonczenie: 'none',
+      bodyEnding: 'flex',
+      Ending: 'none',
       Reset: 'flex',
     });
     bodyContent(value);
@@ -40,34 +40,34 @@ const Zakonczenie = ({ reset, back }) => {
   const ResetClick = () => {
     setDisplay({
       ...display,
-      bodyZakonczenie: 'flex',
-      Zakonczenie: 'flex',
+      bodyEnding: 'flex',
+      Ending: 'flex',
       Reset: 'none'
     });
     bodyContent('');
     back();
   };
     return (
-    <div className='bodyZakonczenie' style={{ display: display.bodyZakonczenie }}>
-      <p>{content.bodyZakonczenie}</p>
-    <button id="Zakonczenie1" className="Zakonczenie" onClick={() => handleClick('Please do not hesitate to contact me if I can provide any additional information.,')} style={{ display: display.Zakonczenie }}><span className="material-symbols-outlined">done</span>Please do not hesitate to contact me if I can provide any additional information.</button>
-    <button id="Zakonczenie2"className="Zakonczenie" onClick={() => handleClick('Please let me know if there is anything I can help you with.')} style={{ display: display.Zakonczenie }}><span className="material-symbols-outlined">done</span>Please let me know if there is anything I can help you with.</button>
-    <button id="Zakonczenie3"className="Zakonczenie" onClick={() => handleClick('Please let me know if you have any questions')} style={{ display: display.Zakonczenie }}><span className="material-symbols-outlined">done</span>Please let me know if you have any questions</button>
-    <button id="Zakonczenie4"className="Zakonczenie" onClick={() => handleClick('Thank you for help and feedback. Let us keep in touch!')} style={{ display: display.Zakonczenie }}><span className="material-symbols-outlined">done</span>Thank you for help and feedback. Let us keep in touch!</button>
-    <button id="Zakonczenie5"className="Zakonczenie" onClick={() => handleClick('Thank you in advance')} style={{ display: display.Zakonczenie }}><span className="material-symbols-outlined">done</span>Thank you in advance</button>
-    <button id="Zakonczenie6"className="Zakonczenie" onClick={() => handleClick('Thanks for your attention')} style={{ display: display.Zakonczenie }}><span className="material-symbols-outlined">done</span>Thanks for your attention</button>
-    <button id="Zakonczenie7"className="Zakonczenie" onClick={() => handleClick('Please accept our apologies for the inconvenience you had.')} style={{ display: display.Zakonczenie }}><span className="material-symbols-outlined">done</span>Please accept our apologies for the inconvenience you had.</button>
-    <button id="Zakonczenie8"className="Zakonczenie" onClick={() => handleClick('Please do not hesitate to share any thoughts or concerns with me and I would be glad to discuss this further.')} style={{ display: display.Zakonczenie }}><span className="material-symbols-outlined">done</span>Please do not hesitate to share any thoughts or concerns with me and I would be glad to discuss this further.</button>
-    <button id="Zakonczenie9"className="Zakonczenie" onClick={() => handleClick('Please do not hesitate to contact me if I can provide any additional information.,')} style={{ display: display.Zakonczenie }}><span className="material-symbols-outlined">done</span>Please do not hesitate to contact me if I can provide any additional information.</button>
-    <button id="Zakonczenie10"className="Zakonczenie" onClick={() => handleClick('Please let me know if there is anything I can help you with.')} style={{ display: display.Zakonczenie }}><span className="material-symbols-outlined">done</span>Please let me know if there is anything I can help you with.</button>
-    <button id="Zakonczenie11"className="Zakonczenie" onClick={() => handleClick('Please let me know if you have any questions')} style={{ display: display.Zakonczenie }}><span className="material-symbols-outlined">done</span>Please let me know if you have any questions</button>
-    <button id="Zakonczenie12"className="Zakonczenie" onClick={() => handleClick('Thank you for help and feedback. Let us keep in touch!')} style={{ display: display.Zakonczenie }}><span className="material-symbols-outlined">done</span>Thank you for help and feedback. Let us keep in touch!</button>
-    <button id="Zakonczenie13"className="Zakonczenie" onClick={() => handleClick('Thank you in advance')} style={{ display: display.Zakonczenie }}><span className="material-symbols-outlined">done</span>Thank you in advance</button>
-    <button id="Zakonczenie14"className="Zakonczenie" onClick={() => handleClick('Thanks for your attention')} style={{ display: display.Zakonczenie }}><span className="material-symbols-outlined">done</span>Thanks for your attention</button>
-    <button id="Zakonczenie15"className="Zakonczenie" onClick={() => handleClick('Please accept our apologies for the inconvenience you had.')} style={{ display: display.Zakonczenie }}><span className="material-symbols-outlined">done</span>We want to thank you in advance for your time and hope that you enjoyed your experience.</button>
+    <div className='bodyEnding' style={{ display: display.bodyEnding }}>
+      <p>{content.bodyEnding}</p>
+    <button id="Ending1" className="Ending" onClick={() => handleClick('Please do not hesitate to contact me if I can provide any additional information.,')} style={{ display: display.Ending }}><span className="material-symbols-outlined">done</span>Please do not hesitate to contact me if I can provide any additional information.</button>
+    <button id="Ending2"className="Ending" onClick={() => handleClick('Please let me know if there is anything I can help you with.')} style={{ display: display.Ending }}><span className="material-symbols-outlined">done</span>Please let me know if there is anything I can help you with.</button>
+    <button id="Ending3"className="Ending" onClick={() => handleClick('Please let me know if you have any questions')} style={{ display: display.Ending }}><span className="material-symbols-outlined">done</span>Please let me know if you have any questions</button>
+    <button id="Ending4"className="Ending" onClick={() => handleClick('Thank you for help and feedback. Let us keep in touch!')} style={{ display: display.Ending }}><span className="material-symbols-outlined">done</span>Thank you for help and feedback. Let us keep in touch!</button>
+    <button id="Ending5"className="Ending" onClick={() => handleClick('Thank you in advance')} style={{ display: display.Ending }}><span className="material-symbols-outlined">done</span>Thank you in advance</button>
+    <button id="Ending6"className="Ending" onClick={() => handleClick('Thanks for your attention')} style={{ display: display.Ending }}><span className="material-symbols-outlined">done</span>Thanks for your attention</button>
+    <button id="Ending7"className="Ending" onClick={() => handleClick('Please accept our apologies for the inconvenience you had.')} style={{ display: display.Ending }}><span className="material-symbols-outlined">done</span>Please accept our apologies for the inconvenience you had.</button>
+    <button id="Ending8"className="Ending" onClick={() => handleClick('Please do not hesitate to share any thoughts or concerns with me and I would be glad to discuss this further.')} style={{ display: display.Ending }}><span className="material-symbols-outlined">done</span>Please do not hesitate to share any thoughts or concerns with me and I would be glad to discuss this further.</button>
+    <button id="Ending9"className="Ending" onClick={() => handleClick('Please do not hesitate to contact me if I can provide any additional information.,')} style={{ display: display.Ending }}><span className="material-symbols-outlined">done</span>Please do not hesitate to contact me if I can provide any additional information.</button>
+    <button id="Ending10"className="Ending" onClick={() => handleClick('Please let me know if there is anything I can help you with.')} style={{ display: display.Ending }}><span className="material-symbols-outlined">done</span>Please let me know if there is anything I can help you with.</button>
+    <button id="Ending11"className="Ending" onClick={() => handleClick('Please let me know if you have any questions')} style={{ display: display.Ending }}><span className="material-symbols-outlined">done</span>Please let me know if you have any questions</button>
+    <button id="Ending12"className="Ending" onClick={() => handleClick('Thank you for help and feedback. Let us keep in touch!')} style={{ display: display.Ending }}><span className="material-symbols-outlined">done</span>Thank you for help and feedback. Let us keep in touch!</button>
+    <button id="Ending13"className="Ending" onClick={() => handleClick('Thank you in advance')} style={{ display: display.Ending }}><span className="material-symbols-outlined">done</span>Thank you in advance</button>
+    <button id="Ending14"className="Ending" onClick={() => handleClick('Thanks for your attention')} style={{ display: display.Ending }}><span className="material-symbols-outlined">done</span>Thanks for your attention</button>
+    <button id="Ending15"className="Ending" onClick={() => handleClick('Please accept our apologies for the inconvenience you had.')} style={{ display: display.Ending }}><span className="material-symbols-outlined">done</span>We want to thank you in advance for your time and hope that you enjoyed your experience.</button>
     <button className="Reset" style={{ display: display.Reset }} onClick={ResetClick}>Reset</button>
     </div>
     );
     };
     
-    export default Zakonczenie;
+    export default Ending;

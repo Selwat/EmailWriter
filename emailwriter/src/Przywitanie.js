@@ -1,67 +1,65 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
-const Przywitanie = ({ reset, back }) => {
-  const [content, setContent] = useState({
-    bodyPrzywitanie: ''
-  });
+const Greeting = ({ reset, back }) => {
+const [content, setContent] = useState({
+GreetingBody: ''
+});
 
-  const [display, setDisplay] = useState({
-    bodyPrzywitanie: 'flex',
-    Przywitanie: 'flex',
-    Reset: 'none',
-  });
+const [display, setDisplay] = useState({
+GreetingBody: 'flex',
+Greetings: 'flex',
+Reset: 'none',
+});
 
+useEffect(() => {
+if (reset === "reset") {
+handleReset();
+}
+// eslint-disable-next-line react-hooks/exhaustive-deps
+}, [reset]);
 
-  useEffect(() => {
-    if (reset === "resetowac") {
-      ResetClick();
-      
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [reset]);
+const updateContent = (value) => {
+setContent({
+...content,
+GreetingBody: value,
+});
+};
 
-  const bodyContent = (value) => {
-    setContent({
-      ...content,
-      bodyPrzywitanie: value,
-    });
+const handleGreetingClick = (value) => {
+setDisplay({
+...display,
+GreetingBody: 'flex',
+Greetings: 'none',
+Reset: 'flex',
+});
+updateContent(value);
+};
+
+const handleReset = () => {
+setDisplay({
+...display,
+GreetingBody: 'flex',
+Greetings: 'flex',
+Reset: 'none'
+});
+updateContent('');
+back();
+};
+return (
+  <div className='GreetingBody' style={{ display: display.GreetingBody }}>
+    <p>{content.GreetingBody}</p>
+  <button id="Greeting1"className="Greeting" onClick={() => handleGreetingClick('Dear Madam,')} style={{ display: display.Greetings }}><span className="material-symbols-outlined">done</span>Dear Madam,</button>
+  <button id="Greeting2"className="Greeting" onClick={() => handleGreetingClick('Dear Mr,')} style={{ display: display.Greetings }}><span className="material-symbols-outlined">done</span>Dear Mr,</button>
+  <button id="Greeting3"className="Greeting" onClick={() => handleGreetingClick('Dear Mrs,')} style={{ display: display.Greetings}}><span className="material-symbols-outlined">done</span>Dear Mrs,</button>
+  <button id="Greeting4"className="Greeting" onClick={() => handleGreetingClick('Dear Ms,')} style={{ display: display.Greetings }}><span className="material-symbols-outlined">done</span>Dear Ms,</button>
+  <button id="Greeting5"className="Greeting" onClick={() => handleGreetingClick('Dear Sir,')} style={{ display: display.Greetings }}><span className="material-symbols-outlined">done</span>Dear Sir,</button>
+  <button id="Greeting6"className="Greeting" onClick={() => handleGreetingClick('Good Morning,')} style={{ display: display.Greetings }}><span className="material-symbols-outlined">done</span>Good Morning,</button>
+  <button id="Greeting7"className="Greeting" onClick={() => handleGreetingClick('Greetings,')} style={{ display: display.Greetings }}><span className="material-symbols-outlined">done</span>Greetings,</button>
+  <button id="Greeting8"className="Greeting" onClick={() => handleGreetingClick('To whom it may concern,')} style={{ display: display.Greetings }}><span className="material-symbols-outlined">done</span>To whom it may concern,</button>
+  <button className="Reset" style={{ display: display.Reset }} onClick={handleReset}>Reset</button>
+  </div>
+  );
   };
-
-  const handleClick = (value) => {
-    setDisplay({
-      ...display,
-      bodyPrzywitanie: 'flex',
-      Przywitanie: 'none',
-      Reset: 'flex',
-    });
-    bodyContent(value);
-  };
-
-  const ResetClick = () => {
-    setDisplay({
-      ...display,
-      bodyPrzywitanie: 'flex',
-      Przywitanie: 'flex',
-      Reset: 'none'
-    });
-    bodyContent('');
-    back();
-  };
-    
-    return (
-    <div className='bodyPrzywitanie' style={{ display: display.bodyPrzywitanie }}>
-      <p>{content.bodyPrzywitanie}</p>
-    <button id="Przywitanie1"className="Przywitanie" onClick={() => handleClick('Dear Madam,')} style={{ display: display.Przywitanie }}><span className="material-symbols-outlined">done</span>Dear Madam,</button>
-    <button id="Przywitanie2"className="Przywitanie" onClick={() => handleClick('Dear Mr,')} style={{ display: display.Przywitanie }}><span className="material-symbols-outlined">done</span>Dear Mr,</button>
-    <button id="Przywitanie3"className="Przywitanie" onClick={() => handleClick('Dear Mrs,')} style={{ display: display.Przywitanie}}><span className="material-symbols-outlined">done</span>Dear Mrs,</button>
-    <button id="Przywitanie4"className="Przywitanie" onClick={() => handleClick('Dear Ms,')} style={{ display: display.Przywitanie }}><span className="material-symbols-outlined">done</span>Dear Ms,</button>
-    <button id="Przywitanie5"className="Przywitanie" onClick={() => handleClick('Dear Sir,')} style={{ display: display.Przywitanie }}><span className="material-symbols-outlined">done</span>Dear Sir,</button>
-    <button id="Przywitanie6"className="Przywitanie" onClick={() => handleClick('Good Morning,')} style={{ display: display.Przywitanie }}><span className="material-symbols-outlined">done</span>Good Morning,</button>
-    <button id="Przywitanie7"className="Przywitanie" onClick={() => handleClick('Greetings,')} style={{ display: display.Przywitanie }}><span className="material-symbols-outlined">done</span>Greetings,</button>
-    <button id="Przywitanie8"className="Przywitanie" onClick={() => handleClick('To whom it may concern,')} style={{ display: display.Przywitanie }}><span className="material-symbols-outlined">done</span>To whom it may concern,</button>
-    <button className="Reset" style={{ display: display.Reset }} onClick={ResetClick}>Reset</button>
-    </div>
-    );
-    };
-    
-    export default Przywitanie;
+  
+  export default Greeting;
+  

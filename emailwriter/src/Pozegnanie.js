@@ -1,19 +1,19 @@
 import React, { useState, useEffect} from "react";
 
-const Pozegnanie = ({ reset, back }) => {
+const Farewell = ({ reset, back }) => {
   const [content, setContent] = useState({
-    bodyPozegnanie: ''
+    bodyFarewell: ''
   });
 
   const [display, setDisplay] = useState({
-    bodyPozegnanie: 'flex',
-    Pozegnanie: 'flex',
+    bodyFarewell: 'flex',
+    Farewell: 'flex',
     Reset: 'none',
   });
 
 
   useEffect(() => {
-    if (reset === "resetowac") {
+    if (reset === "reset") {
       ResetClick();
       
     }
@@ -23,15 +23,15 @@ const Pozegnanie = ({ reset, back }) => {
   const bodyContent = (value) => {
     setContent({
       ...content,
-      bodyPozegnanie: value,
+      bodyFarewell: value,
     });
   };
 
   const handleClick = (value) => {
     setDisplay({
       ...display,
-      bodyPozegnanie: 'flex',
-      Pozegnanie: 'none',
+      bodyFarewell: 'flex',
+      Farewell: 'none',
       Reset: 'flex',
     });
     bodyContent(value);
@@ -40,8 +40,8 @@ const Pozegnanie = ({ reset, back }) => {
   const ResetClick = () => {
     setDisplay({
       ...display,
-      bodyPozegnanie: 'flex',
-      Pozegnanie: 'flex',
+      bodyFarewell: 'flex',
+      Farewell: 'flex',
       Reset: 'none'
     });
     bodyContent('');
@@ -51,17 +51,17 @@ const Pozegnanie = ({ reset, back }) => {
     
     return (
       <>
-    <div className='bodyPozegnanie' style={{ display: display.bodyPozegnanie }}>
-      <p>{content.bodyPozegnanie}</p>
-    <button id="Pozegnanie1"className="Pozegnanie" onClick={() => handleClick('Best regards,,')} style={{ display: display.Pozegnanie }}><span className="material-symbols-outlined">done</span>Best regards,</button>
-    <button id="Pozegnanie2"className="Pozegnanie" onClick={() => handleClick('Kind regards,')} style={{ display: display.Pozegnanie }}><span className="material-symbols-outlined">done</span>Kind regards,</button>
-    <button id="Pozegnanie3"className="Pozegnanie" onClick={() => handleClick('Regards,')} style={{ display: display.Pozegnanie }}><span className="material-symbols-outlined">done</span>Regards,</button>
-    <button id="Pozegnanie4"className="Pozegnanie" onClick={() => handleClick('Respectfully,')} style={{ display: display.Pozegnanie }}><span className="material-symbols-outlined">done</span>Respectfully,</button>
-    <button id="Pozegnanie5"className="Pozegnanie" onClick={() => handleClick('Sincerely,')} style={{ display: display.Pozegnanie }}><span className="material-symbols-outlined">done</span>Sincerely,</button>
-    <button id="Pozegnanie6"className="Pozegnanie" onClick={() => handleClick('With regards,')} style={{ display: display.Pozegnanie }}><span className="material-symbols-outlined">done</span>With regards,</button>
-    <button id="Pozegnanie7"className="Pozegnanie" onClick={() => handleClick('Yours faithfully,')} style={{ display: display.Pozegnanie }}><span className="material-symbols-outlined">done</span>Yours faithfully,</button>
-    <button id="Pozegnanie8"className="Pozegnanie" onClick={() => handleClick('Yours sincerely,')} style={{ display: display.Pozegnanie }}><span className="material-symbols-outlined">done</span>Yours sincerely,</button>
-    <button id="Pozegnanie9"className="Pozegnanie" onClick={() => handleClick('Yours truly,')} style={{ display: display.Pozegnanie }}><span className="material-symbols-outlined">done</span>Yours truly,</button>
+    <div className='bodyFarewell' style={{ display: display.bodyFarewell }}>
+      <p>{content.bodyFarewell}</p>
+    <button id="Farewell1"className="Farewell" onClick={() => handleClick('Best regards,,')} style={{ display: display.Farewell }}><span className="material-symbols-outlined">done</span>Best regards,</button>
+    <button id="Farewell2"className="Farewell" onClick={() => handleClick('Kind regards,')} style={{ display: display.Farewell }}><span className="material-symbols-outlined">done</span>Kind regards,</button>
+    <button id="Farewell3"className="Farewell" onClick={() => handleClick('Regards,')} style={{ display: display.Farewell }}><span className="material-symbols-outlined">done</span>Regards,</button>
+    <button id="Farewell4"className="Farewell" onClick={() => handleClick('Respectfully,')} style={{ display: display.Farewell }}><span className="material-symbols-outlined">done</span>Respectfully,</button>
+    <button id="Farewell5"className="Farewell" onClick={() => handleClick('Sincerely,')} style={{ display: display.Farewell }}><span className="material-symbols-outlined">done</span>Sincerely,</button>
+    <button id="Farewell6"className="Farewell" onClick={() => handleClick('With regards,')} style={{ display: display.Farewell }}><span className="material-symbols-outlined">done</span>With regards,</button>
+    <button id="Farewell7"className="Farewell" onClick={() => handleClick('Yours faithfully,')} style={{ display: display.Farewell }}><span className="material-symbols-outlined">done</span>Yours faithfully,</button>
+    <button id="Farewell8"className="Farewell" onClick={() => handleClick('Yours sincerely,')} style={{ display: display.Farewell }}><span className="material-symbols-outlined">done</span>Yours sincerely,</button>
+    <button id="Farewell9"className="Farewell" onClick={() => handleClick('Yours truly,')} style={{ display: display.Farewell }}><span className="material-symbols-outlined">done</span>Yours truly,</button>
     <button className="Reset" style={{ display: display.Reset }} onClick={ResetClick}>Reset</button>
     </div>
     </>
@@ -69,4 +69,4 @@ const Pozegnanie = ({ reset, back }) => {
 };
     
     
-    export default Pozegnanie;
+    export default Farewell;
