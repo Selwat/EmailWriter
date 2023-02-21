@@ -79,7 +79,7 @@ const Formularz = () => {
           <button className="Reset1" onClick={()=>{onClickReset()}}>
             Reset
           </button>
-          <button className="GitHub">Github</button>
+          <button className="GitHub" onClick={() => window.open("https://github.com/Selwat/Email", "_blank")}>Github</button>
         </div>
       </footer>
     </>

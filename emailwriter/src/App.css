@@ -27,7 +27,7 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
     min-height: min-content;
-    padding-bottom: 40px;
+    padding-bottom: 70px;
 }
 .material-symbols-outlined{
     display: flex;
@@ -131,12 +131,11 @@ body.dark .calyform{
     opacity: 0.8;
 }
 body.dark .stopka{
-    background: linear-gradient(rgba(255, 255, 253, 0.01), rgba(149, 228, 21, 0.362));
+    background: #92929251;
 }
-
-
-
-
+body.dark .stopka:hover{
+    background: #c6c4c4b4;
+}
 .calyform{
     background-color: rgba(255, 255, 255, 0.926);
     width: 70vw;
@@ -148,6 +147,7 @@ body.dark .stopka{
     text-align: left;
     padding-bottom: 40px;
     font-size: 18px;
+    border-radius: 15px;
 }
 .adresatDiv{
     background-color: rgb(255, 255, 255);
